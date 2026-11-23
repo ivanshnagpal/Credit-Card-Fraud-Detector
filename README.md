@@ -1,10 +1,10 @@
-# 💳 Credit Card Fraud Detector AI
+# Credit Card Fraud Detector - Machine Learning & Risk Scoring 
 
 An End-to-End machine learning application for identifying fraudulent credit card transactions in highly imbalanced data (0.17% fraud rate). Built using **Scikit-Learn**, **XGBoost**, **Random Forest**, **RobustScaler**, **KaggleHub**, and deployed via an interactive **Streamlit** web application.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 Credit card fraud detection is a classic **high-imbalance classification** problem. Out of 284,807 transactions in the dataset, only 492 (0.17%) are fraudulent. Predicting every transaction as "Legitimate" yields a misleading **99.83% accuracy** while missing 100% of actual fraud cases.
 
@@ -12,17 +12,17 @@ This project uses **Cost-Sensitive Learning (Class Weights)** to penalize minori
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- **⚖️ Cost-Sensitive Class Weighting:** Trains Random Forest with `class_weight='balanced_subsample'` and XGBoost with `scale_pos_weight` to address extreme 99.83% to 0.17% imbalance.
-- **🛡️ Outlier-Robust Scaling:** Standardizes skewed `Amount` and `Time` features using `RobustScaler` (median & IQR).
-- **🎯 Precision-Recall AUC Focus:** Evaluates model performance using PR-AUC and ROC-AUC curves rather than raw accuracy.
-- **🎛️ Dynamic Threshold Slider:** Sidebar control allowing users to adjust the decision threshold ($0.05$ to $0.95$) to prioritize **Recall** (catching more fraud) or **Precision** (minimizing false alarms).
-- **💡 Instant Test Presets:** Preset buttons for **✅ Sample Normal Transaction** and **🚨 Sample Suspected Fraud** (derived from authentic fraud PCA feature vectors: `V10`, `V11`, `V12`, `V14`, `V17`).
+- **Cost-Sensitive Class Weighting:** Trains Random Forest with `class_weight='balanced_subsample'` and XGBoost with `scale_pos_weight` to address extreme 99.83% to 0.17% imbalance.
+- **Outlier-Robust Scaling:** Standardizes skewed `Amount` and `Time` features using `RobustScaler` (median & IQR).
+- **Precision-Recall AUC Focus:** Evaluates model performance using PR-AUC and ROC-AUC curves rather than raw accuracy.
+- **Dynamic Threshold Slider:** Sidebar control allowing users to adjust the decision threshold ($0.05$ to $0.95$) to prioritize **Recall** (catching more fraud) or **Precision** (minimizing false alarms).
+- **Instant Test Presets:** Preset buttons for **Sample Normal Transaction** and **Sample Suspected Fraud** (derived from authentic fraud PCA feature vectors: `V10`, `V11`, `V12`, `V14`, `V17`).
 
 ---
 
-## 📊 Dataset Information
+## Dataset Information
 
 The model is trained on the benchmark **Credit Card Fraud Detection Dataset** (Kaggle / ULB).
 
@@ -39,7 +39,7 @@ The model is trained on the benchmark **Credit Card Fraud Detection Dataset** (K
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Credit Card Fraud/
@@ -62,7 +62,7 @@ Credit Card Fraud/
 
 ---
 
-## ⚙️ Installation & Local Setup
+## Installation & Local Setup
 
 ### 1. Prerequisites
 Ensure you have **Python 3.9+** installed on your system.
@@ -90,17 +90,17 @@ The application will open automatically at `http://localhost:8501`.
 
 ---
 
-## 🚀 How to Use the Web App
+## How to Use the Web App
 
 1. Adjust the **Fraud Decision Threshold** slider on the sidebar ($0.05$ to $0.95$). Lowering the threshold boosts **Recall** (catches more fraud).
-2. Click **✅ Sample Normal Transaction** or **🚨 Sample Suspected Fraud** for instant pre-filled feature parameters.
+2. Click **Sample Normal Transaction** or **Sample Suspected Fraud** for instant pre-filled feature parameters.
 3. Or enter custom transaction parameters ($Amount$, $Time$, $V1$, $V4$, $V10$, $V11$, $V12$, $V14$, $V17$).
-4. Click **🔍 Analyze Transaction Fraud Risk**.
-5. View the risk assessment (**🚨 FRAUDULENT TRANSACTION FLAGGED** vs **✅ TRANSACTION APPROVED**) and the fraud probability progress meter.
+4. Click **Analyze Transaction Fraud Risk**.
+5. View the risk assessment (**FRAUDULENT TRANSACTION FLAGGED** vs **TRANSACTION APPROVED**) and the fraud probability progress meter.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend / Deployment:** Streamlit
 - **Machine Learning Frameworks:** Scikit-Learn, XGBoost, Imbalanced-Learn
@@ -109,6 +109,8 @@ The application will open automatically at `http://localhost:8501`.
 
 ---
 
-## 📜 License
+## Connect
 
-Distributed under the MIT License.
+**Vansh Nagpal**
+
+[LinkedIn](https://www.linkedin.com/in/vansh-nagpal-vn011) • [GitHub](https://github.com/ivanshnagpal)
